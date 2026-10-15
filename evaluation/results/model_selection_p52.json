@@ -1,0 +1,35 @@
+{
+  "selected_model": "logistic_regression",
+  "model_version": "logistic-regression-selected-v2",
+  "artifact": "ml/registry/logistic_regression_selected_v2.joblib",
+  "primary_metric": "mean ROC-AUC",
+  "secondary_metrics": [
+    "F1",
+    "recall",
+    "precision",
+    "accuracy"
+  ],
+  "selection_rule": "Highest mean 5-fold ROC-AUC on training partition only; ties: lower ROC-AUC SD, higher F1, higher recall.",
+  "cv_table": "evaluation/results/cv_model_selection_p52.csv",
+  "random_seed": 42,
+  "train_test_split": {
+    "test_size": 0.2,
+    "stratify": true,
+    "random_state": 42
+  },
+  "preprocessing": "zero-coded medical measurements converted to missing; fold-local median imputation and StandardScaler; pregnancies zero retained",
+  "dataset": "Pima Indians Diabetes dataset",
+  "dataset_sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+  "selection_timestamp_utc": "2026-10-15T07:02:40.362396+00:00",
+  "package_versions": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0"
+  },
+  "selection_used_test_partition": false,
+  "artifact_sha256": "c824fc29b6eeb3ad4e1882ca12555d805c298b261c1c50de264f54682f14cdb8"
+}

@@ -1,0 +1,84 @@
+{
+  "model": "xgboost-baseline-v1",
+  "brier_score": 0.1686104516862851,
+  "actual_positive_rate": 0.35064935064935066,
+  "mean_predicted_probability": 0.33525386372166865,
+  "bin_strategy": "10 uniform-width bins; empty bins omitted by sklearn calibration_curve",
+  "observed_positive_fraction": [
+    0.08955223880597014,
+    0.4166666666666667,
+    0.2222222222222222,
+    0.5714285714285714,
+    0.3333333333333333,
+    0.4,
+    0.6,
+    0.875,
+    0.5714285714285714,
+    0.8125
+  ],
+  "mean_predicted_probability_by_nonempty_bin": [
+    0.02729400495977711,
+    0.15103594586253166,
+    0.23621338109175363,
+    0.34170184816632954,
+    0.4291129211584727,
+    0.5578665375709534,
+    0.652291762828827,
+    0.7669439017772675,
+    0.8531413844653538,
+    0.9490210376679897
+  ],
+  "bin_counts": [
+    {
+      "bin_lower": 0.0,
+      "bin_upper": 0.1,
+      "count": 67
+    },
+    {
+      "bin_lower": 0.1,
+      "bin_upper": 0.2,
+      "count": 12
+    },
+    {
+      "bin_lower": 0.2,
+      "bin_upper": 0.30000000000000004,
+      "count": 9
+    },
+    {
+      "bin_lower": 0.30000000000000004,
+      "bin_upper": 0.4,
+      "count": 7
+    },
+    {
+      "bin_lower": 0.4,
+      "bin_upper": 0.5,
+      "count": 3
+    },
+    {
+      "bin_lower": 0.5,
+      "bin_upper": 0.6000000000000001,
+      "count": 15
+    },
+    {
+      "bin_lower": 0.6000000000000001,
+      "bin_upper": 0.7000000000000001,
+      "count": 10
+    },
+    {
+      "bin_lower": 0.7000000000000001,
+      "bin_upper": 0.8,
+      "count": 8
+    },
+    {
+      "bin_lower": 0.8,
+      "bin_upper": 0.9,
+      "count": 7
+    },
+    {
+      "bin_lower": 0.9,
+      "bin_upper": 1.0,
+      "count": 16
+    }
+  ],
+  "interpretation": "Brier score and reliability bins describe held-out probability errors; they do not establish clinical calibration."
+}

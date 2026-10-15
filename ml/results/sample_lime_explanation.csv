@@ -1,0 +1,9 @@
+feature,weight,direction,rank
+Glucose > 140.25,0.4601573091248115,supports positive prediction,1
+DiabetesPedigreeFunction > 0.63,0.10521684917064009,supports positive prediction,2
+Age > 41.00,0.09450823843609864,supports positive prediction,3
+3.00 < Pregnancies <= 6.00,-0.04391300942483649,opposes positive prediction,4
+SkinThickness > 32.00,0.034686428802335335,supports positive prediction,5
+32.40 < BMI <= 36.60,0.033814811007807324,supports positive prediction,6
+64.00 < BloodPressure <= 72.00,0.01919694308837651,supports positive prediction,7
+Insulin > 127.25,0.0060180545480885,supports positive prediction,8

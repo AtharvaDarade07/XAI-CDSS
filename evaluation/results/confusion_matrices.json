@@ -1,0 +1,26 @@
+{
+  "logistic_regression": {
+    "tn": 82,
+    "fp": 18,
+    "fn": 27,
+    "tp": 27
+  },
+  "random_forest": {
+    "tn": 85,
+    "fp": 15,
+    "fn": 25,
+    "tp": 29
+  },
+  "svc": {
+    "tn": 84,
+    "fp": 16,
+    "fn": 24,
+    "tp": 30
+  },
+  "xgboost": {
+    "tn": 80,
+    "fp": 20,
+    "fn": 18,
+    "tp": 36
+  }
+}

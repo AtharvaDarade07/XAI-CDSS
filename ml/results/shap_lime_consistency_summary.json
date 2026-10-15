@@ -1,0 +1,24 @@
+{
+  "prediction_probability": 0.8078943490982056,
+  "top3_shap": [
+    "Age",
+    "Glucose",
+    "Pregnancies"
+  ],
+  "top3_lime": [
+    "Glucose",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "top3_overlap_count": 2,
+  "top3_overlap_percentage": 66.66666666666666,
+  "top5_overlap_count": 4,
+  "top5_overlap_percentage": 80.0,
+  "spearman_correlation": 0.4523809523809524,
+  "spearman_p_value": 0.2604047674368853,
+  "direction_agreement_count": 8,
+  "direction_disagreement_count": 0,
+  "direction_agreement_percentage": 100.0,
+  "shared_feature_count": 8,
+  "interpretation": "Metrics are reported without a qualitative agreement category because no defensible threshold has been established. SHAP and LIME are different methods; agreement in important features is evidence of consistency for this example, while disagreement does not by itself establish that either method is wrong. This is a single-patient analysis and cannot establish general explanation stability or clinical validity."
+}

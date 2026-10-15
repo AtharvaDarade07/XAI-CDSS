@@ -1,0 +1,180 @@
+{
+  "case_level_only": true,
+  "patient_input": {
+    "Pregnancies": 6.0,
+    "Glucose": 148.0,
+    "BloodPressure": 72.0,
+    "SkinThickness": 35.0,
+    "Insulin": null,
+    "BMI": 33.6,
+    "DiabetesPedigreeFunction": 0.627,
+    "Age": 50.0
+  },
+  "predicted_class": 1,
+  "predicted_probability": 0.8078943490982056,
+  "shap": {
+    "feature_count": 8,
+    "feature_order": [
+      "Pregnancies",
+      "Glucose",
+      "BloodPressure",
+      "SkinThickness",
+      "Insulin",
+      "BMI",
+      "DiabetesPedigreeFunction",
+      "Age"
+    ],
+    "contribution_output_space": "raw tree-model output (margin; not probability)",
+    "base_value": -0.605213463306427,
+    "contribution_sum": 2.041599988937378,
+    "raw_model_margin": 1.436385989189148,
+    "additivity_absolute_error": 5.364418029785156e-07,
+    "additivity_verified": true,
+    "contributions": [
+      {
+        "feature": "Pregnancies",
+        "value": -0.3983551859855652,
+        "direction": "negative",
+        "rank": 3
+      },
+      {
+        "feature": "Glucose",
+        "value": 0.6114575266838074,
+        "direction": "positive",
+        "rank": 2
+      },
+      {
+        "feature": "BloodPressure",
+        "value": 0.15425972640514374,
+        "direction": "positive",
+        "rank": 6
+      },
+      {
+        "feature": "SkinThickness",
+        "value": 0.38302358984947205,
+        "direction": "positive",
+        "rank": 4
+      },
+      {
+        "feature": "Insulin",
+        "value": 0.3114684820175171,
+        "direction": "positive",
+        "rank": 5
+      },
+      {
+        "feature": "BMI",
+        "value": 0.07661500573158264,
+        "direction": "positive",
+        "rank": 8
+      },
+      {
+        "feature": "DiabetesPedigreeFunction",
+        "value": 0.14839902520179749,
+        "direction": "positive",
+        "rank": 7
+      },
+      {
+        "feature": "Age",
+        "value": 0.7547318339347839,
+        "direction": "positive",
+        "rank": 1
+      }
+    ]
+  },
+  "lime": {
+    "feature_count": 8,
+    "feature_order": [
+      "Pregnancies",
+      "Glucose",
+      "BloodPressure",
+      "SkinThickness",
+      "Insulin",
+      "BMI",
+      "DiabetesPedigreeFunction",
+      "Age"
+    ],
+    "configuration": {
+      "random_state": 42,
+      "num_samples": 5000,
+      "num_features": 8
+    },
+    "output_space": "local surrogate weight for positive-class probability",
+    "weights_are_probabilities": false,
+    "predict_fn_probability_class1": 0.8078943490982056,
+    "prediction_probability_matches_xgboost": true,
+    "contributions": [
+      {
+        "feature": "Pregnancies",
+        "weight": -0.04391300942483649,
+        "direction": "negative",
+        "rank": 4
+      },
+      {
+        "feature": "Glucose",
+        "weight": 0.4601573091248115,
+        "direction": "positive",
+        "rank": 1
+      },
+      {
+        "feature": "BloodPressure",
+        "weight": 0.01919694308837651,
+        "direction": "positive",
+        "rank": 7
+      },
+      {
+        "feature": "SkinThickness",
+        "weight": 0.034686428802335335,
+        "direction": "positive",
+        "rank": 5
+      },
+      {
+        "feature": "Insulin",
+        "weight": 0.0060180545480885,
+        "direction": "positive",
+        "rank": 8
+      },
+      {
+        "feature": "BMI",
+        "weight": 0.033814811007807324,
+        "direction": "positive",
+        "rank": 6
+      },
+      {
+        "feature": "DiabetesPedigreeFunction",
+        "weight": 0.10521684917064009,
+        "direction": "positive",
+        "rank": 2
+      },
+      {
+        "feature": "Age",
+        "weight": 0.09450823843609864,
+        "direction": "positive",
+        "rank": 3
+      }
+    ]
+  },
+  "consistency": {
+    "top3_overlap_count": 2,
+    "top3_overlap_percentage": 66.66666666666666,
+    "top5_overlap_count": 4,
+    "top5_overlap_percentage": 80.0,
+    "spearman_correlation": 0.4523809523809524,
+    "spearman_p_value": 0.2604047674368853,
+    "direction_agreement_count": 8,
+    "direction_disagreement_count": 0,
+    "direction_agreement_percentage": 100.0,
+    "shared_feature_count": 8,
+    "shap_top_features": [
+      "Age",
+      "Glucose",
+      "Pregnancies"
+    ],
+    "lime_top_features": [
+      "Glucose",
+      "DiabetesPedigreeFunction",
+      "Age"
+    ],
+    "interpretation": "This compares SHAP and LIME for this explanation instance only. The methods use different scales and disagreement does not establish that either method is wrong; this single-instance comparison does not establish global explanation stability or clinical validity."
+  },
+  "interpretation": "SHAP and LIME showed partial agreement for the evaluated synthetic case. A single case does not establish global explanation stability or trustworthiness."
+}

@@ -1,0 +1,24 @@
+numpy
+pandas
+scikit-learn
+xgboost
+shap
+lime
+matplotlib
+seaborn
+jupyter
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+psycopg2-binary
+pydantic
+pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+# Passlib 1.7.x backend compatibility (bcrypt 4.1+ changed backend internals).
+bcrypt<4.1
+python-multipart
+httpx
+pytest
+pytest-asyncio

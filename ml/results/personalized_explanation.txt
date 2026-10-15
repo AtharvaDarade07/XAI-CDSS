@@ -1,0 +1,36 @@
+PERSONALIZED MODEL EXPLANATION
+==================================
+
+MODEL OUTPUT
+Model-estimated probability of the positive class: 80.79%.
+Predicted class: 1.
+
+FEATURES CONTRIBUTING TOWARD A HIGHER MODEL PREDICTION
+1. Age - value: 50 - contribution: +0.754732
+   Age contributed toward a higher model prediction (SHAP contribution +0.754732).
+2. Glucose - value: 148 - contribution: +0.611457
+   Glucose contributed toward a higher model prediction (SHAP contribution +0.611457).
+3. SkinThickness - value: 35 - contribution: +0.383024
+   SkinThickness contributed toward a higher model prediction (SHAP contribution +0.383024).
+4. Insulin - value: missing - contribution: +0.311468
+   Insulin contributed toward a higher model prediction (SHAP contribution +0.311468). The original Insulin value is missing and was handled through the project's preprocessing pipeline.
+
+FEATURES CONTRIBUTING TOWARD A LOWER MODEL PREDICTION
+1. Pregnancies - value: 6 - contribution: -0.398355
+   Pregnancies contributed toward a lower model prediction (SHAP contribution -0.398355).
+
+REFERENCE-DATA CONTEXT
+Compared with the reference dataset, the patient's Age value (50) is above the interquartile range (24 to 41).
+Compared with the reference dataset, the patient's Glucose value (148) is above the interquartile range (99 to 141).
+Compared with the reference dataset, the patient's Pregnancies value (6) is within the interquartile range (1 to 6).
+Compared with the reference dataset, the patient's SkinThickness value (35) is within the interquartile range (22 to 36).
+Insulin: the original patient value is missing, so it cannot be compared with the reference interquartile range; preprocessing handled the missing value.
+These are comparisons with this dataset's interquartile ranges, not medical normal/abnormal assessments.
+
+SHAP/LIME CONSISTENCY
+SHAP and LIME identified 2 of the same 3 features among their top three contributors (66.7%). Their top-five overlap was 4 of 5 (80.0%). Across the 8 shared features, both methods agreed on contribution direction for 8 (100.0%) in this example. This single-example comparison does not establish general explanation stability.
+
+RESPONSIBLE-AI NOTE
+This output explains the behavior of an experimental machine-learning model. It is not a medical diagnosis or treatment recommendation. Final clinical decisions require qualified professional judgment. This prototype has not established prospective clinical validity.
+
+SHAP contributions describe model behavior and are not on the same scale as LIME weights.

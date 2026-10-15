@@ -1,0 +1,24 @@
+{
+  "evaluation_date": "2026-10-15",
+  "os": "Windows",
+  "python_version": "3.11.9",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "shap": "0.51.0",
+    "lime": "0.2.0.1",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0"
+  },
+  "model_version": "logistic-regression-selected-v2",
+  "dataset_filename": "pima-indians-diabetes.csv",
+  "dataset_sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+  "frontend_node_version": "v22.19.0",
+  "npm_version": "10.9.3",
+  "git_commit": null,
+  "git_metadata_status": "UNAVAILABLE: project directory has no .git metadata",
+  "timestamp_utc": "2026-10-15",
+  "secrets_included": false
+}

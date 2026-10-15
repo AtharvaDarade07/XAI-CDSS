@@ -1,0 +1,4 @@
+{
+    "selected_model_by_test_roc_auc": "xgboost",
+    "selection_note": "Preliminary selection was based on cross-validation. This file records the highest held-out test ROC-AUC for reporting comparison only."
+}

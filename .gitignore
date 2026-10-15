@@ -1,0 +1,32 @@
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated files
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.log
+
+# Python cache files
+**/__pycache__/
+*.py[cod]
+

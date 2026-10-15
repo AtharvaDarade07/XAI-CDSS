@@ -1,0 +1,126 @@
+{
+  "prediction": {
+    "class": 1,
+    "probability": 0.8078943490982056,
+    "probability_percent": 80.78943490982056
+  },
+  "patient": {
+    "Pregnancies": 6.0,
+    "Glucose": 148.0,
+    "BloodPressure": 72.0,
+    "SkinThickness": 35.0,
+    "Insulin": null,
+    "BMI": 33.6,
+    "DiabetesPedigreeFunction": 0.627,
+    "Age": 50.0
+  },
+  "top_positive_features": [
+    {
+      "feature": "Age",
+      "patient_value": 50.0,
+      "patient_value_display": "50",
+      "shap_contribution": 0.7547318,
+      "direction": "toward a higher model prediction",
+      "rank_by_absolute_shap": 1,
+      "explanation": "Age contributed toward a higher model prediction (SHAP contribution +0.754732)."
+    },
+    {
+      "feature": "Glucose",
+      "patient_value": 148.0,
+      "patient_value_display": "148",
+      "shap_contribution": 0.61145747,
+      "direction": "toward a higher model prediction",
+      "rank_by_absolute_shap": 2,
+      "explanation": "Glucose contributed toward a higher model prediction (SHAP contribution +0.611457)."
+    },
+    {
+      "feature": "SkinThickness",
+      "patient_value": 35.0,
+      "patient_value_display": "35",
+      "shap_contribution": 0.3830236,
+      "direction": "toward a higher model prediction",
+      "rank_by_absolute_shap": 4,
+      "explanation": "SkinThickness contributed toward a higher model prediction (SHAP contribution +0.383024)."
+    },
+    {
+      "feature": "Insulin",
+      "patient_value": null,
+      "patient_value_display": "missing",
+      "shap_contribution": 0.31146845,
+      "direction": "toward a higher model prediction",
+      "rank_by_absolute_shap": 5,
+      "explanation": "Insulin contributed toward a higher model prediction (SHAP contribution +0.311468). The original Insulin value is missing and was handled through the project's preprocessing pipeline."
+    }
+  ],
+  "top_negative_features": [
+    {
+      "feature": "Pregnancies",
+      "patient_value": 6.0,
+      "patient_value_display": "6",
+      "shap_contribution": -0.3983552,
+      "direction": "toward a lower model prediction",
+      "rank_by_absolute_shap": 3,
+      "explanation": "Pregnancies contributed toward a lower model prediction (SHAP contribution -0.398355)."
+    }
+  ],
+  "reference_context": [
+    {
+      "feature": "Age",
+      "patient_value": 50.0,
+      "reference_median": 29.0,
+      "reference_25th_percentile": 24.0,
+      "reference_75th_percentile": 41.0,
+      "comparison": "above reference interquartile range",
+      "sentence": "Compared with the reference dataset, the patient's Age value (50) is above the interquartile range (24 to 41)."
+    },
+    {
+      "feature": "Glucose",
+      "patient_value": 148.0,
+      "reference_median": 117.0,
+      "reference_25th_percentile": 99.0,
+      "reference_75th_percentile": 141.0,
+      "comparison": "above reference interquartile range",
+      "sentence": "Compared with the reference dataset, the patient's Glucose value (148) is above the interquartile range (99 to 141)."
+    },
+    {
+      "feature": "Pregnancies",
+      "patient_value": 6.0,
+      "reference_median": 3.0,
+      "reference_25th_percentile": 1.0,
+      "reference_75th_percentile": 6.0,
+      "comparison": "within reference interquartile range",
+      "sentence": "Compared with the reference dataset, the patient's Pregnancies value (6) is within the interquartile range (1 to 6)."
+    },
+    {
+      "feature": "SkinThickness",
+      "patient_value": 35.0,
+      "reference_median": 29.0,
+      "reference_25th_percentile": 22.0,
+      "reference_75th_percentile": 36.0,
+      "comparison": "within reference interquartile range",
+      "sentence": "Compared with the reference dataset, the patient's SkinThickness value (35) is within the interquartile range (22 to 36)."
+    },
+    {
+      "feature": "Insulin",
+      "patient_value": null,
+      "reference_median": 125.0,
+      "reference_25th_percentile": 76.25,
+      "reference_75th_percentile": 190.0,
+      "comparison": "missing patient value; no range comparison",
+      "sentence": "Insulin: the original patient value is missing, so it cannot be compared with the reference interquartile range; preprocessing handled the missing value."
+    }
+  ],
+  "explanation_consistency": {
+    "top3_overlap_count": 2,
+    "top3_overlap_percentage": 66.66666666666666,
+    "top5_overlap_count": 4,
+    "top5_overlap_percentage": 80.0,
+    "direction_agreement_count": 8,
+    "direction_disagreement_count": 0,
+    "direction_agreement_percentage": 100.0,
+    "shared_feature_count": 8,
+    "summary": "SHAP and LIME identified 2 of the same 3 features among their top three contributors (66.7%). Their top-five overlap was 4 of 5 (80.0%). Across the 8 shared features, both methods agreed on contribution direction for 8 (100.0%) in this example. This single-example comparison does not establish general explanation stability."
+  },
+  "human_readable_summary": "Model-estimated probability of the positive class: 80.79% (predicted class 1).\n\nTop features contributing toward a higher model prediction: Age; Glucose; SkinThickness; Insulin.\n\nTop features contributing toward a lower model prediction: Pregnancies.\n\nCompared with the reference dataset, the patient's Age value (50) is above the interquartile range (24 to 41). Compared with the reference dataset, the patient's Glucose value (148) is above the interquartile range (99 to 141). Compared with the reference dataset, the patient's Pregnancies value (6) is within the interquartile range (1 to 6). Compared with the reference dataset, the patient's SkinThickness value (35) is within the interquartile range (22 to 36). Insulin: the original patient value is missing, so it cannot be compared with the reference interquartile range; preprocessing handled the missing value.\n\nSHAP and LIME identified 2 of the same 3 features among their top three contributors (66.7%). Their top-five overlap was 4 of 5 (80.0%). Across the 8 shared features, both methods agreed on contribution direction for 8 (100.0%) in this example. This single-example comparison does not establish general explanation stability.",
+  "responsible_ai_note": "This output explains the behavior of an experimental machine-learning model. It is not a medical diagnosis or treatment recommendation. Final clinical decisions require qualified professional judgment. This prototype has not established prospective clinical validity."
+}

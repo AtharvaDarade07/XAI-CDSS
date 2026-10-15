@@ -1,0 +1,192 @@
+{
+  "scope": "one synthetic research case; not a real patient",
+  "model_version": "logistic-regression-selected-v2",
+  "input": {
+    "Pregnancies": 6,
+    "Glucose": 148,
+    "BloodPressure": 72,
+    "SkinThickness": 35,
+    "Insulin": 0,
+    "BMI": 33.6,
+    "DiabetesPedigreeFunction": 0.627,
+    "Age": 50
+  },
+  "prediction": {
+    "class": 1,
+    "probability": 0.7058118935953963
+  },
+  "shap": {
+    "method": "SHAP",
+    "features": [
+      {
+        "feature": "Glucose",
+        "feature_value": 148.0,
+        "contribution": 1.1194789987394338,
+        "direction": "positive",
+        "rank": 1
+      },
+      {
+        "feature": "Pregnancies",
+        "feature_value": 6.0,
+        "contribution": 0.20174824977855235,
+        "direction": "positive",
+        "rank": 2
+      },
+      {
+        "feature": "Age",
+        "feature_value": 50.0,
+        "contribution": 0.18499608792498773,
+        "direction": "positive",
+        "rank": 3
+      },
+      {
+        "feature": "DiabetesPedigreeFunction",
+        "feature_value": 0.627,
+        "contribution": 0.11245059222573602,
+        "direction": "positive",
+        "rank": 4
+      },
+      {
+        "feature": "BMI",
+        "feature_value": 33.6,
+        "contribution": 0.10766247573728616,
+        "direction": "positive",
+        "rank": 5
+      },
+      {
+        "feature": "SkinThickness",
+        "feature_value": 35.0,
+        "contribution": 0.020049975894849366,
+        "direction": "positive",
+        "rank": 6
+      },
+      {
+        "feature": "Insulin",
+        "feature_value": 0.0,
+        "contribution": 0.011459445913385465,
+        "direction": "positive",
+        "rank": 7
+      },
+      {
+        "feature": "BloodPressure",
+        "feature_value": 72.0,
+        "contribution": 0.001654352905822286,
+        "direction": "positive",
+        "rank": 8
+      }
+    ],
+    "output_space": "raw Logistic Regression output (log-odds; not probability)",
+    "base_value": -0.8843707972400765,
+    "contribution_sum": 1.759500179120053,
+    "model_output": 0.8751293818799765,
+    "additivity_error": 1.1102230246251565e-16
+  },
+  "lime": {
+    "method": "LIME",
+    "features": [
+      {
+        "feature": "Glucose",
+        "feature_value": 148.0,
+        "contribution": 0.44158742792612843,
+        "direction": "positive",
+        "rank": 1
+      },
+      {
+        "feature": "DiabetesPedigreeFunction",
+        "feature_value": 0.627,
+        "contribution": 0.07654074077175031,
+        "direction": "positive",
+        "rank": 2
+      },
+      {
+        "feature": "Age",
+        "feature_value": 50.0,
+        "contribution": 0.044590422384267726,
+        "direction": "positive",
+        "rank": 3
+      },
+      {
+        "feature": "Insulin",
+        "feature_value": 0.0,
+        "contribution": -0.0333310569018805,
+        "direction": "negative",
+        "rank": 4
+      },
+      {
+        "feature": "BMI",
+        "feature_value": 33.6,
+        "contribution": 0.028306734338966206,
+        "direction": "positive",
+        "rank": 5
+      },
+      {
+        "feature": "Pregnancies",
+        "feature_value": 6.0,
+        "contribution": 0.014787725329993236,
+        "direction": "positive",
+        "rank": 6
+      },
+      {
+        "feature": "SkinThickness",
+        "feature_value": 35.0,
+        "contribution": 0.009001680950378285,
+        "direction": "positive",
+        "rank": 7
+      },
+      {
+        "feature": "BloodPressure",
+        "feature_value": 72.0,
+        "contribution": 0.0015592355319878847,
+        "direction": "positive",
+        "rank": 8
+      }
+    ],
+    "output_space": "local surrogate weight for positive-class probability",
+    "base_value": null,
+    "contribution_sum": null,
+    "model_output": null,
+    "additivity_error": null
+  },
+  "lime_configuration": {
+    "seed": 42,
+    "num_samples": 5000,
+    "num_features": 8
+  },
+  "repeated_xai_identical_within_1e-10": true,
+  "personalized_explanation": {
+    "summary": "For this synthetic input, the model's largest absolute feature contributions are listed below. Contributions describe model behavior only; they are not medical advice.",
+    "patient_values_and_directions": [
+      {
+        "feature": "Glucose",
+        "value": 148.0,
+        "contribution": 1.1194789987394338,
+        "direction": "positive"
+      },
+      {
+        "feature": "Pregnancies",
+        "value": 6.0,
+        "contribution": 0.20174824977855235,
+        "direction": "positive"
+      },
+      {
+        "feature": "Age",
+        "value": 50.0,
+        "contribution": 0.18499608792498773,
+        "direction": "positive"
+      },
+      {
+        "feature": "DiabetesPedigreeFunction",
+        "value": 0.627,
+        "contribution": 0.11245059222573602,
+        "direction": "positive"
+      },
+      {
+        "feature": "BMI",
+        "value": 33.6,
+        "contribution": 0.10766247573728616,
+        "direction": "positive"
+      }
+    ],
+    "recommendations": []
+  }
+}

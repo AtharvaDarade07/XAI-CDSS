@@ -1,0 +1,32 @@
+{
+  "title": "Independent held-out test evaluation after model selection",
+  "model": "logistic_regression",
+  "model_version": "logistic-regression-selected-v2",
+  "artifact_sha256": "c824fc29b6eeb3ad4e1882ca12555d805c298b261c1c50de264f54682f14cdb8",
+  "n_test": 154,
+  "accuracy": 0.7077922077922078,
+  "precision": 0.6,
+  "recall": 0.5,
+  "f1": 0.5454545454545454,
+  "roc_auc": 0.812962962962963,
+  "roc_auc_bootstrap_95ci": {
+    "lower": 0.7395729433592805,
+    "upper": 0.8728849053295934,
+    "replicates": 2000,
+    "seed": 42
+  },
+  "brier_score": 0.17541983807977352,
+  "actual_positive_rate": 0.35064935064935066,
+  "mean_predicted_probability": 0.3515446033547184,
+  "confusion_matrix_labels": [
+    0,
+    1
+  ],
+  "confusion_matrix": {
+    "TN": 82,
+    "FP": 18,
+    "FN": 27,
+    "TP": 27
+  },
+  "selection_used_test_partition": false
+}

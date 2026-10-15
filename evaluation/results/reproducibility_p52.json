@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "dataset_sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+  "model_version": "logistic-regression-selected-v2",
+  "artifact_sha256": "c824fc29b6eeb3ad4e1882ca12555d805c298b261c1c50de264f54682f14cdb8",
+  "package_versions": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0"
+  },
+  "cv_fold_scores_identical_on_repeat": true,
+  "repeated_prediction": {
+    "scope": "fixed synthetic example; not a held-out test case",
+    "class": 1,
+    "probability": 0.7058118935953963,
+    "repeat_class": 1,
+    "repeat_probability": 0.7058118935953963
+  },
+  "status": "REPRODUCIBLE"
+}

@@ -1,0 +1,9 @@
+feature,value,shap_value,absolute_shap,direction
+Age,50.0,0.7547318,0.7547318,increases risk
+Glucose,148.0,0.61145747,0.61145747,increases risk
+Pregnancies,6.0,-0.3983552,0.3983552,decreases risk
+SkinThickness,35.0,0.3830236,0.3830236,increases risk
+Insulin,,0.31146845,0.31146845,increases risk
+BloodPressure,72.0,0.15425968,0.15425968,increases risk
+DiabetesPedigreeFunction,0.627,0.14839907,0.14839907,increases risk
+BMI,33.6,0.07661502,0.07661502,increases risk

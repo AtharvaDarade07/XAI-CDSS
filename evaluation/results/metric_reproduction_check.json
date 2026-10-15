@@ -1,0 +1,7 @@
+{
+  "prior_held_out_metrics_match_within_1e-9": true,
+  "comparison_source": "existing ml/results/final_test_results.csv",
+  "evaluated_test_rows": 154,
+  "test_positive_rate": 0.35064935064935066,
+  "xgboost_brier_score": 0.1686104516862851
+}

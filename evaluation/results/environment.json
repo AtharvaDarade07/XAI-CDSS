@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "2026-10-15T06:51:20.733941+00:00",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.11.9",
+  "package_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "shap": "0.51.0",
+    "lime": "0.2.0.1",
+    "matplotlib": "3.11.2",
+    "fastapi": "0.143.1",
+    "sqlalchemy": "2.1.4",
+    "pytest": "9.1.1",
+    "pydantic": "2.14.1",
+    "alembic": "1.20.0",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0",
+    "passlib": "1.7.4",
+    "bcrypt": "4.0.1",
+    "python_jose": "3.5.0"
+  },
+  "frontend_node_version": "v22.19.0",
+  "frontend_npm_version": "10.9.3",
+  "frontend_package_versions": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.6",
+    "axios": "1.20.0",
+    "vite": "6.4.4",
+    "typescript": "5.7.3",
+    "vitest": "4.1.11"
+  },
+  "model_version": "xgboost-baseline-v1",
+  "dataset_filename": "pima-indians-diabetes.csv",
+  "dataset_sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+  "git_commit_hash": null,
+  "git_status": "unavailable: project directory has no .git metadata",
+  "ml_artifact_hashes": {
+    "logistic_regression_baseline.joblib": "c824fc29b6eeb3ad4e1882ca12555d805c298b261c1c50de264f54682f14cdb8",
+    "random_forest_baseline.joblib": "e00316a7db4c73d0b254e9ea8ec44c7ba9e956e9bfdd8a987cdb972c4a0ae7ed",
+    "svc_baseline.joblib": "ef713beac6193d7d9e1d86e22ac6d09868879ebdbefca56123cfca23a5f4755a",
+    "xgboost_baseline.joblib": "060d211640f4c2c3b1cb8c87217fc415d2845eca9224ae4de7c7a8b4da331d56"
+  }
+}

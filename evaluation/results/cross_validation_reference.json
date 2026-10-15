@@ -1,0 +1,138 @@
+{
+  "protocol": {
+    "best_model_by_cv_roc_auc": "logistic_regression",
+    "random_seed": 42,
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "selection_metric": "roc_auc_mean"
+  },
+  "results": [
+    {
+      "model": "logistic_regression",
+      "metric": "accuracy",
+      "mean": 0.7882313741,
+      "std": 0.0190568247
+    },
+    {
+      "model": "logistic_regression",
+      "metric": "precision",
+      "mean": 0.763807592,
+      "std": 0.0597729851
+    },
+    {
+      "model": "logistic_regression",
+      "metric": "recall",
+      "mean": 0.5747508306,
+      "std": 0.0227277493
+    },
+    {
+      "model": "logistic_regression",
+      "metric": "f1",
+      "mean": 0.6545454545,
+      "std": 0.0244231991
+    },
+    {
+      "model": "logistic_regression",
+      "metric": "roc_auc",
+      "mean": 0.8433637874,
+      "std": 0.0185495521
+    },
+    {
+      "model": "random_forest",
+      "metric": "accuracy",
+      "mean": 0.768719179,
+      "std": 0.0270941467
+    },
+    {
+      "model": "random_forest",
+      "metric": "precision",
+      "mean": 0.6994755054,
+      "std": 0.0635939172
+    },
+    {
+      "model": "random_forest",
+      "metric": "recall",
+      "mean": 0.6027685493,
+      "std": 0.0257522114
+    },
+    {
+      "model": "random_forest",
+      "metric": "f1",
+      "mean": 0.6457663885,
+      "std": 0.0298225353
+    },
+    {
+      "model": "random_forest",
+      "metric": "roc_auc",
+      "mean": 0.8209482281,
+      "std": 0.020899951
+    },
+    {
+      "model": "xgboost",
+      "metric": "accuracy",
+      "mean": 0.7507930161,
+      "std": 0.0218121052
+    },
+    {
+      "model": "xgboost",
+      "metric": "precision",
+      "mean": 0.666295618,
+      "std": 0.0591267499
+    },
+    {
+      "model": "xgboost",
+      "metric": "recall",
+      "mean": 0.5888150609,
+      "std": 0.0400720707
+    },
+    {
+      "model": "xgboost",
+      "metric": "f1",
+      "mean": 0.6223242594,
+      "std": 0.0228736557
+    },
+    {
+      "model": "xgboost",
+      "metric": "roc_auc",
+      "mean": 0.8022771318,
+      "std": 0.025211346
+    },
+    {
+      "model": "svc",
+      "metric": "accuracy",
+      "mean": 0.7801279488,
+      "std": 0.0136232524
+    },
+    {
+      "model": "svc",
+      "metric": "precision",
+      "mean": 0.7415343915,
+      "std": 0.0643548086
+    },
+    {
+      "model": "svc",
+      "metric": "recall",
+      "mean": 0.5841638981,
+      "std": 0.0572333535
+    },
+    {
+      "model": "svc",
+      "metric": "f1",
+      "mean": 0.6484617369,
+      "std": 0.0187098303
+    },
+    {
+      "model": "svc",
+      "metric": "roc_auc",
+      "mean": 0.8333084164,
+      "std": 0.022803459
+    }
+  ],
+  "existing_cv_means_match_within_1e-9": false,
+  "recomputed_during_p51": true,
+  "selection_note": "CV results are training-partition estimates. The CV winner is determined by the recomputed table; final_model.json records XGBoost as highest on the same held-out test set, so the test set was used for selection and is not an independent unbiased estimate for that selected model.",
+  "final_model_record": {
+    "selected_model_by_test_roc_auc": "xgboost",
+    "selection_note": "Preliminary selection was based on cross-validation. This file records the highest held-out test ROC-AUC for reporting comparison only."
+  }
+}

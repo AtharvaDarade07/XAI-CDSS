@@ -1,0 +1,25 @@
+{
+  "top3_overlap_count": 2,
+  "top3_overlap_percentage": 66.66666666666666,
+  "top5_overlap_count": 4,
+  "top5_overlap_percentage": 80.0,
+  "spearman_correlation": 0.6428571428571429,
+  "spearman_p_value": 0.08555889101267325,
+  "direction_agreement_count": 7,
+  "direction_disagreement_count": 1,
+  "direction_agreement_percentage": 87.5,
+  "shared_feature_count": 8,
+  "shap_top_features": [
+    "Glucose",
+    "Pregnancies",
+    "Age"
+  ],
+  "lime_top_features": [
+    "Glucose",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "interpretation": "This compares SHAP and LIME for this explanation instance only. The methods use different scales and disagreement does not establish that either method is wrong; this single-instance comparison does not establish global explanation stability or clinical validity.",
+  "scope": "single synthetic case-level demonstration",
+  "model_version": "logistic-regression-selected-v2"
+}

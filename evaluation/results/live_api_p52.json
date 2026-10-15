@@ -1,0 +1,14 @@
+{
+  "base_url": "http://127.0.0.1:8002",
+  "health": "PASS",
+  "login": "PASS",
+  "auth_me": "PASS",
+  "admin_rbac": "PASS",
+  "synthetic_patient_record_prediction_shap_lime_consistency": "PASS",
+  "synthetic_data_cleanup": "PASS",
+  "observed_model_version": "xgboost-baseline-v1",
+  "expected_frozen_model_version": "logistic-regression-selected-v2",
+  "selected_model_live_api": "FAIL",
+  "reason": "The already-running backend process still serves the P5.1 XGBoost implementation. It was left running as requested; its process was not restarted. The configured SQLite database also still has xgboost-baseline v1 marked active. Source changes and isolated backend tests use the P5.2 Logistic Regression artifact; safe live activation requires a coordinated model-version switch and reload of the existing 8002 process.",
+  "live_e2e_used_synthetic_data_only": true
+}

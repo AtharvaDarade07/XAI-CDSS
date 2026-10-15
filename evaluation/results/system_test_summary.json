@@ -1,0 +1,131 @@
+{
+  "phase": "P5.1 System-Level Testing & Research Evaluation",
+  "evaluation_date": "2026-10-15",
+  "overall_status": "PARTIAL",
+  "overall_status_reason": "Technical checks pass, but final model selection used the held-out test comparison, the existing and rerun XGBoost CV means differ slightly under the current package environment, and no external or prospective validation was performed.",
+  "backend_tests": {
+    "status": "PASS",
+    "command": "python -m pytest backend/tests -q",
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 5,
+    "warning_summary": "Starlette/httpx deprecation, three SHAP pending deprecations, and XGBoost serialized-artifact compatibility warning."
+  },
+  "frontend_tests": {
+    "status": "PASS",
+    "command": "npm.cmd test",
+    "test_files_passed": 3,
+    "tests_passed": 55,
+    "failed": 0
+  },
+  "frontend_build": {
+    "status": "PASS",
+    "command": "npm.cmd run build",
+    "bundled_modules": 103
+  },
+  "api_integration": {
+    "status": "PASS",
+    "base_url": "http://127.0.0.1:8002",
+    "health": "PASS",
+    "end_to_end_workflow": "PASS",
+    "frontend_backend_cors": "PASS",
+    "synthetic_test_data": "Created and removed after verification"
+  },
+  "authentication": {
+    "status": "PASS",
+    "admin_login_and_me": "PASS",
+    "unauthenticated_access": "401",
+    "invalid_token": "401",
+    "inactive_account": "403 in backend tests"
+  },
+  "rbac": {
+    "status": "PASS",
+    "admin_endpoint": "200 authorized",
+    "clinician_permissions_and_insufficient_role": "Covered by backend tests"
+  },
+  "prediction": {
+    "status": "PASS",
+    "model_version": "xgboost-baseline-v1",
+    "synthetic_case_probability": 0.80789435
+  },
+  "shap": {
+    "status": "PASS",
+    "feature_count": 8,
+    "output_space": "raw tree-model margin",
+    "additivity_absolute_error": 5.364418029785156e-07
+  },
+  "lime": {
+    "status": "PASS",
+    "feature_count": 8,
+    "random_state": 42,
+    "num_samples": 5000,
+    "weights_are_probabilities": false
+  },
+  "consistency": {
+    "status": "PARTIAL",
+    "scope": "One synthetic case only",
+    "top3_overlap": "2/3",
+    "top5_overlap": "4/5",
+    "spearman_rho": 0.4523809523809524,
+    "spearman_p_value": 0.2604047674368853,
+    "direction_agreement": "8/8",
+    "global_stability_claim": false
+  },
+  "personalized_explanation": {
+    "status": "PASS",
+    "scope": "Existing generator evaluated on its synthetic example in a temporary output directory",
+    "patient_specific_values_and_direction": "PASS",
+    "unsupported_medical_recommendations": "None found"
+  },
+  "data_validation": {
+    "status": "PASS",
+    "missing_patient_code": 422,
+    "duplicate_patient_code": 409,
+    "out_of_dataset_boundary": 422,
+    "missing_or_mismatched_resources": 404,
+    "null_and_zero_handling": "Nullable value accepted; zero pregnancy/glucose/insulin values preserved"
+  },
+  "ml_evaluation": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "held_out_metrics_reproduce_existing_results": true,
+    "cross_validation_recomputed": true,
+    "existing_cv_means_match": false,
+    "selection_independence": "PARTIAL: XGBoost is recorded as selected by held-out ROC-AUC, while cross-validation ranks Logistic Regression first."
+  },
+  "calibration": {
+    "status": "PASS_AS_MEASUREMENT_ONLY",
+    "brier_score": 0.1686104516862851,
+    "actual_positive_rate": 0.35064935064935066,
+    "mean_predicted_probability": 0.33525386372166865,
+    "clinically_calibrated": false
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "repeated_predictions_identical": true,
+    "repeated_shap_identical_within_1e-10": true,
+    "repeated_lime_identical_within_1e-10": true,
+    "xgboost_artifact_version_warning": true
+  },
+  "security_review": {
+    "status": "PARTIAL",
+    "scope": "Lightweight source/configuration review and automated auth/RBAC tests; no penetration test",
+    "password_hashing_jwt_rbac_orm_and_narrow_cors": "Reviewed and tests pass",
+    "production_security_claim": false
+  },
+  "responsible_ai_review": {
+    "status": "PARTIAL",
+    "scope": "Documented limitations; no external, prospective, or subgroup validation",
+    "clinical_validity_claim": false,
+    "autonomous_diagnosis_or_treatment_claim": false
+  },
+  "database_migrations": {
+    "status": "PASS",
+    "current_revision": "20261015_0001 (head)",
+    "migration_required": false
+  },
+  "git_metadata": {
+    "status": "NOT_AVAILABLE",
+    "reason": "The project directory contains no .git metadata; branch, commit, and tracked-file state could not be verified."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "phase": "P5.2 Model Selection and Independent Evaluation",
+  "overall_status": "PARTIAL",
+  "status_reason": "CV-only model selection, frozen artifact, held-out metrics, XAI, reproducibility, and automated regressions are recorded. The already-running API still serves xgboost-baseline-v1, not logistic-regression-selected-v2; it was left running. Held-out calculations were rerun during artifact finalization, so literal single-computation evaluation criterion was not met.",
+  "model_selection": {
+    "status": "PASS",
+    "selected_model": "logistic_regression",
+    "model_version": "logistic-regression-selected-v2",
+    "criterion": "Highest mean ROC-AUC on 5-fold training-partition CV",
+    "independent_test_used_for_selection": false,
+    "artifact_frozen": true
+  },
+  "cross_validation": {
+    "status": "PASS",
+    "folds": 5,
+    "seed": 42,
+    "preprocessing_fold_local": true,
+    "repeated_results_identical": true,
+    "discrepancy_cause": "Cause not conclusively established; historical XGBoost runtime versions incomplete."
+  },
+  "independent_test": {
+    "status": "PARTIAL",
+    "metrics_recorded": true,
+    "model_changed_after_test": false,
+    "single_calculation_only": false,
+    "metrics_rerun_during_artifact_finalization": true
+  },
+  "calibration": {"status": "PASS_AS_INTERNAL_MEASUREMENT", "brier_score": 0.1754198381, "clinical_calibration_claim": false},
+  "reproducibility": {"status": "PASS", "cv_identical": true, "synthetic_prediction_identical": true, "xai_repeat_identical_within_1e-10": true},
+  "shap": {"status": "PASS", "feature_count": 8, "method": "LinearExplainer", "output_space": "raw log-odds", "additivity_validated": true},
+  "lime": {"status": "PASS", "feature_count": 8, "seed": 42, "num_samples": 5000},
+  "consistency": {"status": "PARTIAL_CASE_LEVEL", "top3_overlap": "2/3", "top5_overlap": "4/5", "spearman": 0.6428571429, "p_value": 0.0855588910, "direction_agreement": "7/8", "global_claim": false},
+  "personalized_explanation": {"status": "PASS_FOR_SYNTHETIC_CASE", "medical_recommendations": false},
+  "backend_tests": {"status": "PASS", "passed": 41, "failed": 0, "skipped": 0, "warnings": 4},
+  "frontend_tests": {"status": "PASS", "passed": 55, "failed": 0, "files_passed": 3},
+  "frontend_build": {"status": "PASS", "modules": 103},
+  "live_api": {"status": "PARTIAL", "auth_and_synthetic_workflow": "PASS", "observed_model_version": "xgboost-baseline-v1", "required_model_version": "logistic-regression-selected-v2", "synthetic_data_cleaned": true},
+  "security_review": {"status": "PARTIAL_REVIEW_ONLY", "scope": "No P5.2 secrets in generated artifact scan; prior lightweight review remains; no penetration test."},
+  "responsible_ai_review": {"status": "PARTIAL_DOCUMENTED", "external_or_clinical_validation": false},
+  "database_migration": {"status": "PASS_NOT_REQUIRED", "alembic_revision": "20261015_0001 (head)"},
+  "git_metadata": {"status": "NOT_AVAILABLE", "reason": "No .git metadata in the project directory."}
+}

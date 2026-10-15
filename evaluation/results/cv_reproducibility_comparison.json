@@ -1,0 +1,113 @@
+{
+  "current_protocol": "5-fold shuffled stratified CV on 80% training partition; preprocessing inside fold; project Python 3.11 environment",
+  "previous_results": {
+    "previous_stored": {
+      "logistic_regression": {
+        "previous_roc_auc_mean": 0.8433637873754153
+      },
+      "svc": {
+        "previous_roc_auc_mean": 0.8333084163898116
+      },
+      "random_forest": {
+        "previous_roc_auc_mean": 0.8209482281284608
+      },
+      "xgboost": {
+        "previous_roc_auc_mean": 0.8032765780730896
+      }
+    },
+    "p51_recomputed": {
+      "logistic_regression": {
+        "previous_roc_auc_mean": 0.843363787375
+      },
+      "random_forest": {
+        "previous_roc_auc_mean": 0.820948228128
+      },
+      "xgboost": {
+        "previous_roc_auc_mean": 0.802277131783
+      },
+      "svc": {
+        "previous_roc_auc_mean": 0.83330841639
+      }
+    }
+  },
+  "current_results": {
+    "logistic_regression": {
+      "current_roc_auc_mean": 0.8433637873754153,
+      "current_roc_auc_std": 0.018549552071526722
+    },
+    "svc": {
+      "current_roc_auc_mean": 0.8333084163898116,
+      "current_roc_auc_std": 0.022803458956872403
+    },
+    "random_forest": {
+      "current_roc_auc_mean": 0.8209482281284608,
+      "current_roc_auc_std": 0.020899950976638763
+    },
+    "xgboost": {
+      "current_roc_auc_mean": 0.8022771317829458,
+      "current_roc_auc_std": 0.02521134600591253
+    }
+  },
+  "differences": {
+    "previous_stored": {
+      "logistic_regression": {
+        "previous_roc_auc_mean": 0.8433637873754153,
+        "current_roc_auc_mean": 0.8433637873754153,
+        "current_roc_auc_std": 0.018549552071526722,
+        "difference": 0.0
+      },
+      "svc": {
+        "previous_roc_auc_mean": 0.8333084163898116,
+        "current_roc_auc_mean": 0.8333084163898116,
+        "current_roc_auc_std": 0.022803458956872403,
+        "difference": 0.0
+      },
+      "random_forest": {
+        "previous_roc_auc_mean": 0.8209482281284608,
+        "current_roc_auc_mean": 0.8209482281284608,
+        "current_roc_auc_std": 0.020899950976638763,
+        "difference": 0.0
+      },
+      "xgboost": {
+        "previous_roc_auc_mean": 0.8032765780730896,
+        "current_roc_auc_mean": 0.8022771317829458,
+        "current_roc_auc_std": 0.02521134600591253,
+        "difference": -0.0009994462901438128
+      }
+    },
+    "p51_recomputed": {
+      "logistic_regression": {
+        "previous_roc_auc_mean": 0.843363787375,
+        "current_roc_auc_mean": 0.8433637873754153,
+        "current_roc_auc_std": 0.018549552071526722,
+        "difference": 4.1533443351227106e-13
+      },
+      "random_forest": {
+        "previous_roc_auc_mean": 0.820948228128,
+        "current_roc_auc_mean": 0.8209482281284608,
+        "current_roc_auc_std": 0.020899950976638763,
+        "difference": 4.608535775219025e-13
+      },
+      "xgboost": {
+        "previous_roc_auc_mean": 0.802277131783,
+        "current_roc_auc_mean": 0.8022771317829458,
+        "current_roc_auc_std": 0.02521134600591253,
+        "difference": -5.417888360170764e-14
+      },
+      "svc": {
+        "previous_roc_auc_mean": 0.83330841639,
+        "current_roc_auc_mean": 0.8333084163898116,
+        "current_roc_auc_std": 0.022803458956872403,
+        "difference": -1.8840484727888906e-13
+      }
+    }
+  },
+  "investigation": {
+    "verified": [
+      "current split, preprocessing, scorer, and model parameters inspected in ml/train.py"
+    ],
+    "package_differences_observed": "P5.1 records show differing XGBoost, SHAP, SciPy versions across available environments; original historical runtime is not fully recorded.",
+    "likely_explanation": "XGBoost fold score discrepancy may reflect package/runtime differences; other models matching narrows the discrepancy, but does not establish causality.",
+    "conclusion": "Cause not conclusively established."
+  }
+}

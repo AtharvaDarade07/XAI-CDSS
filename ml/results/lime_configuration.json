@@ -1,0 +1,27 @@
+{
+  "random_state": 42,
+  "num_features": 8,
+  "num_samples": 5000,
+  "positive_class_label": 1,
+  "feature_order": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "model_path": "C:\\Users\\darad\\OneDrive\\Desktop\\extra files\\ALL Code and evrything\\Edi\\xai-cdss\\ml\\registry\\xgboost_baseline.joblib",
+  "patient_values": {
+    "Pregnancies": 6.0,
+    "Glucose": 148.0,
+    "BloodPressure": 72.0,
+    "SkinThickness": 35.0,
+    "Insulin": NaN,
+    "BMI": 33.6,
+    "DiabetesPedigreeFunction": 0.627,
+    "Age": 50.0
+  }
+}
